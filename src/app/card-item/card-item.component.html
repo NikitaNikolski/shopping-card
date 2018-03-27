@@ -1,0 +1,12 @@
+<div class="card-item-container">
+  <div class="picture">
+    <img [src]="data.imgSrc" alt="">
+  </div>
+  <div class="card-item-info">
+    <div class="title">{{ data.title }}</div>
+    <div class="description">{{ data.description }}</div>
+    <div class="price">Price: {{ data.price }}</div>
+  </div>
+  <button class="btn btn-primary" *ngIf="!isInBasket" (click)="addToBasket()">Add to basket</button>
+  <button class="btn btn-danger" *ngIf="isInBasket" (click)="removeFromBasket()">Remove from basket</button>
+</div>
